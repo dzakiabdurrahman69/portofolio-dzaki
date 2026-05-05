@@ -1,72 +1,163 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Dzaki</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #0f172a;
-            color: white;
-        }
-        header {
-            background: #1e293b;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        .container {
-            padding: 40px;
-            text-align: center;
-        }
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            margin: 20px auto;
-            border-radius: 10px;
-            max-width: 500px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #38bdf8;
-            color: black;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dzaki Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: #020617;
+    position: sticky;
+    top: 0;
+}
+
+nav h2 {
+    color: #38bdf8;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero span {
+    color: #38bdf8;
+}
+
+.hero p {
+    margin: 15px 0;
+    opacity: 0.8;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+}
+
+/* SECTION */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    margin-top: 40px;
+}
+</style>
+
 </head>
 <body>
 
-<header>
-    <h1>🚀 Portofolio Dzaki</h1>
-    <p>Web Developer Pemula</p>
-</header>
-
-<div class="container">
-
-    <div class="card">
-        <h2>Tentang Saya</h2>
-        <p>Saya Dzaki, sedang belajar membuat website dan aplikasi.</p>
+<!-- NAVBAR -->
+<nav>
+    <h2>Dzaki.dev</h2>
+    <div>
+        <a href="#about">Tentang</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Kontak</a>
     </div>
+</nav>
 
-    <div class="card">
-        <h2>Project</h2>
-        <p>Website pertama saya di GitHub</p>
-        <a href="#" class="btn">Lihat Project</a>
+<!-- HERO -->
+<section class="hero">
+    <h1>Halo, Saya <span>Dzaki</span> 👋</h1>
+    <p>Web Developer Pemula yang lagi belajar bikin website keren</p>
+    <a href="#project" class="btn">Lihat Project</a>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+    <h2>Tentang Saya</h2>
+    <p>Saya sedang belajar HTML, CSS, dan GitHub untuk menjadi web developer.</p>
+</section>
+
+<!-- PROJECT -->
+<section class="section" id="project">
+    <h2>Project Saya</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Website Pertama</h3>
+            <p>Project pertama saya upload ke GitHub</p>
+        </div>
+
+        <div class="card">
+            <h3>Kasir Sederhana</h3>
+            <p>Aplikasi kasir berbasis PHP & MySQL</p>
+        </div>
     </div>
+</section>
 
-    <div class="card">
-        <h2>Kontak</h2>
-        <p>Email: dzakiabdurrahman69@gmail.com</p>
-    </div>
+<!-- CONTACT -->
+<section class="section" id="contact">
+    <h2>Kontak</h2>
+    <p>Email: dzakiabdurrahman69@gmail.com</p>
+</section>
 
-</div>
+<footer>
+    <p>© 2026 Dzaki. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
