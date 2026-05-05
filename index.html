@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dzaki Portfolio</title>
 
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
 * {
     margin: 0;
@@ -13,8 +16,8 @@
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #0f172a;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
     color: white;
 }
 
@@ -23,7 +26,8 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
-    background: #020617;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
 }
@@ -36,20 +40,28 @@ nav a {
     color: white;
     text-decoration: none;
     margin-left: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
+    animation: fadeIn 1.5s ease;
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 45px;
 }
 
 .hero span {
-    color: #38bdf8;
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero p {
@@ -59,25 +71,26 @@ nav a {
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 25px;
     background: #38bdf8;
     color: black;
-    border-radius: 5px;
+    border-radius: 30px;
     text-decoration: none;
-    margin-top: 15px;
+    margin-top: 20px;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #0ea5e9;
+    transform: scale(1.1);
 }
 
 /* SECTION */
 .section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
+/* CARD */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -85,24 +98,36 @@ nav a {
 }
 
 .card {
-    background: #1e293b;
-    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
     margin: 15px;
-    border-radius: 10px;
-    width: 250px;
-    transition: 0.3s;
+    border-radius: 15px;
+    width: 260px;
+    transition: 0.4s;
+    backdrop-filter: blur(10px);
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-15px) scale(1.05);
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-    background: #020617;
-    margin-top: 40px;
+    opacity: 0.6;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 </style>
 
@@ -122,14 +147,14 @@ footer {
 <!-- HERO -->
 <section class="hero">
     <h1>Halo, Saya <span>Dzaki</span> 👋</h1>
-    <p>Web Developer Pemula yang lagi belajar bikin website keren</p>
+    <p>Web Developer yang sedang berkembang 🚀</p>
     <a href="#project" class="btn">Lihat Project</a>
 </section>
 
 <!-- ABOUT -->
 <section class="section" id="about">
     <h2>Tentang Saya</h2>
-    <p>Saya sedang belajar HTML, CSS, dan GitHub untuk menjadi web developer.</p>
+    <p>Saya sedang belajar HTML, CSS, dan Git untuk menjadi developer profesional.</p>
 </section>
 
 <!-- PROJECT -->
@@ -138,13 +163,13 @@ footer {
 
     <div class="cards">
         <div class="card">
-            <h3>Website Pertama</h3>
-            <p>Project pertama saya upload ke GitHub</p>
+            <h3>Portfolio Website</h3>
+            <p>Website pribadi saya menggunakan HTML & CSS</p>
         </div>
 
         <div class="card">
-            <h3>Kasir Sederhana</h3>
-            <p>Aplikasi kasir berbasis PHP & MySQL</p>
+            <h3>Aplikasi Kasir</h3>
+            <p>Project kasir berbasis PHP & MySQL</p>
         </div>
     </div>
 </section>
@@ -156,7 +181,7 @@ footer {
 </section>
 
 <footer>
-    <p>© 2026 Dzaki. All rights reserved.</p>
+    <p>© 2026 Dzaki</p>
 </footer>
 
 </body>
